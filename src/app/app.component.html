@@ -9,5 +9,18 @@
     <!--#4.1-->
     <h3 [appBackground]="'red'" [defaultColor]="'blue'" style="text-align: center">{{ headerText }}</h3>
 
+    <ul class="list-group">
+      <li *ngFor="let item of items" (click)="onClick(item)" class="list-group-item">
+        {{item}}
+      </li>
+    </ul>
+
+    <div [ngSwitch]="current">
+      <p *ngSwitchCase="1">'Item1'</p>
+      <p *ngSwitchCase="2">'Item2'</p>
+      <p *ngSwitchCase="3">'Item3'</p>
+      <p *ngSwitchDefault>'ItemDefault'</p>
+    </div>
+
   </div>
 </div>
